@@ -18,12 +18,12 @@
   }
 
   .hidden-mobile {
-    @include mobile {
+    @include mobile{
         display: none !important;
     }
   }
 
-  .hidden-mobile {
+  .visible-mobile {
     @include mobile-above {
         display: none !important;
     }
