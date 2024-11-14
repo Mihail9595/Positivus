@@ -957,4 +957,121 @@ h4 {
   .studies__link:active {
     opacity: 0.7;
   }
+}
+
+.proccess__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  counter-reset: custom-counter;
+  list-style: none;
+}
+@media (max-width: 767px) {
+  .proccess__list {
+    row-gap: 20px;
+  }
+}
+.proccess__item {
+  --counterContent: counter(custom-counter);
+  counter-increment: custom-counter;
+}
+.proccess__item:nth-child(-n+9) {
+  --counterContent: "0" counter(custom-counter);
+}
+.proccess__accordion {
+  --indicatorVerticalRotate: 90deg;
+  padding: 40px 60px;
+  background-color: var(--color-gray);
+  border: var(--border);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow);
+  transition-duration: var(--transition-duration);
+}
+@media (hover: hover) {
+  .proccess__accordion:hover {
+    background-color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .proccess__accordion:active {
+    background-color: var(--color-accent);
+  }
+}
+@media (max-width: 767px) {
+  .proccess__accordion {
+    padding: 30px;
+  }
+}
+.proccess__accordion[open] {
+  --indicatorVerticalRotate: 0deg;
+  background-color: var(--color-accent);
+}
+.proccess__accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+@media (max-width: 767px) {
+  .proccess__accordion-header {
+    column-gap: 28px;
+  }
+}
+.proccess__accordion-title {
+  font-size: clamp(18px, 2.0833333333vw, 30px);
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+@media (max-width: 767px) {
+  .proccess__accordion-title {
+    column-gap: 33px;
+  }
+}
+.proccess__accordion-title::before {
+  content: var(--counterContent);
+  font-size: 2em;
+}
+@media (max-width: 767px) {
+  .proccess__accordion-title::before {
+    font-size: 30px;
+  }
+}
+.proccess__accordion-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  position: relative;
+  background-color: var(--color-gray);
+  border: var(--border);
+  border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .proccess__accordion-indicator {
+    width: 30px;
+  }
+}
+.proccess__accordion-indicator::before, .proccess__accordion-indicator::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  content: "";
+  width: 45%;
+  height: 10%;
+  background-color: var(--color-dark);
+}
+.proccess__accordion-indicator::after {
+  rotate: var(--indicatorVerticalRotate);
+  transition-duration: var(--transition-duration);
+}
+.proccess__accordion-body {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: var(--border);
 }/*# sourceMappingURL=slyle.css.map */
