@@ -1,3 +1,12 @@
+.main{
+    font-size: 36px;
+    font-weight: 500;
+    padding-inline: 7px;
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius-small);
+    line-height: 0.5;
+}
+
 .proccess {
     &__list {
         display: flex;

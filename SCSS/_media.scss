@@ -10,6 +10,9 @@ $mobile: 767px;
 $mobile-s-above: 481px;
 $mobile-s: 480px;
 
+$mobile-ss-above: 441px;
+$mobile-ss: 440px;
+
 
 @mixin desktop-above {
     @media (min-width: $desktop-above) {
@@ -56,7 +59,16 @@ $mobile-s: 480px;
         @content;
     }
 }
-
+@mixin mobile-ss-above {
+    @media (min-width: $mobile-ss-above) {
+        @content;
+    }
+}
+@mixin mobile-ss {
+    @media (max-width: $mobile-ss) {
+        @content;
+    }
+}
 @mixin hover{
     @media (hover:hover) {
         &:hover {

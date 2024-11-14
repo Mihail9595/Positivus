@@ -19,3 +19,15 @@
         display: none !important;
     }
   }
+
+  .hidden-s-mobile {
+    @include mobile-ss{
+        display: none !important;
+    }
+  }
+
+  .visible-s-mobile {
+    @include mobile-ss-above {
+        display: none !important;
+    }
+  }
