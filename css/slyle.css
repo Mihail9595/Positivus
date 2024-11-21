@@ -591,6 +591,7 @@ h4, .h4 {
     background-color: var(--color-light);
     position: sticky;
     top: 0;
+    z-index: 100;
   }
 }
 .header__inner {
