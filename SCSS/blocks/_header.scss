@@ -7,6 +7,9 @@
 
     @include mobile{
         padding-top: 15px;
+        background-color: var(--color-light);
+        position: sticky;
+        top: 0;
     }
 
     &__inner {
